@@ -23,7 +23,7 @@
 			//Difine physical parameter
 			const GROUND_THICKNESS = 1.0;	//Thickness of the floor
 			const BALL_RADIUS = 0.5; 		//Radius of the ball
-			const BALL_INITIAL_POSITION = {x:0.0, y:20.0, z:0.0}; //Initial position of the ball
+			const BALL_INITIAL_POSITION = {x:0.0, y:10.0, z:0.0}; //Initial position of the ball
 			var ball_velocity = {x:0.0, y:-1.0};　//Initial speed of the ball
 			const GRAVITY = -9.8;			//Grvity
 			var delta = 0.01;				//Delta t of simulation 0.01s
@@ -69,9 +69,9 @@
 
 			// Difinition of the ball object
 				//Make sphere object
-			var ballGeometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var ballGeometry = new THREE.BoxGeometry( 2, 3, 2 );
 				//Make material of the object
-			var ballMaterial = new THREE.MeshPhongMaterial( { color: 0x156289, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true } );
+			var ballMaterial = new THREE.MeshPhongMaterial( { color: 0x143959, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true } );
 				//Generate ball object
 			var ball = new THREE.Mesh( ballGeometry, ballMaterial );
 				//Define position of the ball only Y
