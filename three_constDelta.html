@@ -25,7 +25,7 @@
 			const BALL_RADIUS = 0.5; 		//Radius of the ball
 			const BALL_INITIAL_POSITION = {x:0.0, y:10.0, z:0.0}; //Initial position of the ball
 			var ball_velocity = {x:0.0, y:-1.0};　//Initial speed of the ball
-			const GRAVITY = -9.8;			//Grvity
+			const GRAVITY = -4.8;			//Grvity
 			var delta = 0.01;				//Delta t of simulation 0.01s
 			var count = 0;					//Counter of simulation 　
 			var RoE=0.8;					//Reflection coefficient of the floor
@@ -69,9 +69,9 @@
 
 			// Difinition of the ball object
 				//Make sphere object
-			var ballGeometry = new THREE.BoxGeometry( 2, 3, 2 );
+			var ballGeometry = new THREE.BoxGeometry( 2, 2, 2 );
 				//Make material of the object
-			var ballMaterial = new THREE.MeshPhongMaterial( { color: 0x143959, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true } );
+			var ballMaterial = new THREE.MeshPhongMaterial( { color: 0x144473, emissive: 0x072534, side: THREE.DoubleSide, flatShading: true } );
 				//Generate ball object
 			var ball = new THREE.Mesh( ballGeometry, ballMaterial );
 				//Define position of the ball only Y
@@ -123,7 +123,7 @@ The time laped from the stat simulation is calulated by count x delta (sec)
 				if(ball.position.y < 0.5 ) {
 					//In this dummy code, stop the ball on the ground.
 					//Ideally, give rebound speed usind RoE and current spped.
-					ball_velocity.y = 0.0;
+					ball_velocity.y = 0.6;
 				}
 				
 				//Output current lasped time and position on Javascript console
